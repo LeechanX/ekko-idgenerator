@@ -4,11 +4,11 @@ import (
 	"context"
 	"flag"
 
-	"github.com/leechanx/ekko_idgen/config"
-	"github.com/leechanx/ekko_idgen/coordinator"
-	"github.com/leechanx/ekko_idgen/generator"
-	"github.com/leechanx/ekko_idgen/protobuf"
-	"github.com/leechanx/ekko_idgen/system"
+	"github.com/leechanx/ekko-idgenerator/config"
+	"github.com/leechanx/ekko-idgenerator/coordinator"
+	"github.com/leechanx/ekko-idgenerator/generator"
+	"github.com/leechanx/ekko-idgenerator/protobuf"
+	"github.com/leechanx/ekko-idgenerator/system"
 
 	"github.com/smallnest/rpcx/log"
 	"github.com/smallnest/rpcx/server"
