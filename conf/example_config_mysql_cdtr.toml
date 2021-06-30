@@ -1,0 +1,12 @@
+# release date of id generator service
+release_date = "2021-06-01"
+# max product number, range: [0,16]
+max_production_number = 5
+# coordinator type
+coordinator_type = "mysql" # or etcd, mysql or redis
+# check if current timestamp is similar to the remote nodes
+open_time_check_switch = true
+
+[mysql]
+# mysql dsn, if coordinator_type = 'mysql', this field must be fulled
+dsn = "root:???@tcp(localhost:3306)/ekko_coordinator"

@@ -1,0 +1,22 @@
+syntax = "proto3";
+
+package protobuf;
+
+message GetUniqueIDRequest {
+    int32 product = 1;
+}
+
+message GetUniqueIDResponse { 
+    uint64 uid    = 1;
+}
+
+message MGetUniqueIDRequest {
+    int32  product = 1;
+    uint32 count   = 2;
+}
+
+message MGetUniqueIDResponse {
+    uint64 lower_uid = 1;
+    uint64 upper_uid = 2;
+    uint32 count     = 3;
+}

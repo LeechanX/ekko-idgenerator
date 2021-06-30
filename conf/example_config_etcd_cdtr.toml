@@ -1,0 +1,12 @@
+# release date of id generator service
+release_date = "2021-06-01"
+# max product number, range: [0,16]
+max_production_number = 1
+# coordinator type
+coordinator_type = "etcd" # or etcd, mysql or redis
+# check if current timestamp is similar to the remote nodes
+open_time_check_switch = true
+
+[etcd]
+# etcd client addresses, if coordinator_type = 'etcd', this field must be fulled
+client_addrs = ["127.0.0.1:2379"]

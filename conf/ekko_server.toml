@@ -1,0 +1,20 @@
+# release date of id generator service
+release_date = "2021-05-31"
+# max product number, range: [0,16]
+max_production_number = 0
+# coordinator type
+coordinator_type = "none" # or etcd, mysql or redis
+# whether to use a fixed workerID, if coordinator_type = 'none' and number >= 1, it will be used as workerID
+fixed_worker_id = 127
+
+[etcd]
+# etcd client addresses, if coordinator_type = 'etcd', this field must be fulled
+client_addrs = ["", "", "", "", ""]
+
+[mysql]
+# mysql dsn, if coordinator_type = 'mysql', this field must be fulled
+dsn = ""
+
+[redis]
+# redis server address, if coordinator_type = 'redis', this field must be fulled
+server_addr = ""

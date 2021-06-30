@@ -1,0 +1,12 @@
+# release date of id generator service
+release_date = "2021-06-01"
+# max product number, range: [0,16]
+max_production_number = 3
+# coordinator type
+coordinator_type = "redis" # or etcd, mysql or redis
+# check if current timestamp is similar to the remote nodes
+open_time_check_switch = true
+
+[redis]
+# redis server address, if coordinator_type = 'redis', this field must be fulled
+server_addr = "localhost:6379"
