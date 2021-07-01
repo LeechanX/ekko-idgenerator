@@ -1,6 +1,7 @@
 package etcd
 
 import (
+	"context"
 	"fmt"
 	"sort"
 	"strconv"
@@ -43,9 +44,9 @@ func NewEtcdCoordinator(ttl int64) (*EtcdCoordinator, error) {
 		return nil, err
 	}
 	leaseID := leaseRsp.ID
-	leaseChan, err := lease.KeepAlive(util.GetTimeoutContext(), leaseID)
+	leaseChan, err := lease.KeepAlive(context.TODO(), leaseID)
 	if err != nil {
-		log.Errorf("candidate=etcd lease.KeepAlive error: %v", err)
+		log.Errorf("candidate=etcd lease.KeepAlive er`ror: %v", err)
 		return nil, err
 	}
 	etcdCoordinator := &EtcdCoordinator{

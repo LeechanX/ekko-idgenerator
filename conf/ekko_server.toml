@@ -6,6 +6,8 @@ max_production_number = 0
 coordinator_type = "none" # or etcd, mysql or redis
 # whether to use a fixed workerID, if coordinator_type = 'none' and number >= 1, it will be used as workerID
 fixed_worker_id = 127
+# check if current timestamp is similar to the remote nodes
+open_time_check_switch = true
 
 [etcd]
 # etcd client addresses, if coordinator_type = 'etcd', this field must be fulled
